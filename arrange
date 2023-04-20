@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+find ./files -type f -print0 | while IFS= read -r -d '' file; do
+  first_letter=$(echo "$file" | rev | cut -d'/' -f1 | rev | cut -c1 | tr '[:upper:]' '[:lower:]')
+
+  case "$first_letter" in
+	      a) mv "$file" ~/OSSP/w8/assignment_week8/a;;
+    b) mv "$file" ~/OSSP/w8/assignment_week8/b;;
+    c) mv "$file" ~/OSSP/w8/assignment_week8/c;;
+    d) mv "$file" ~/OSSP/w8/assignment_week8/d;;
+    e) mv "$file" ~/OSSP/w8/assignment_week8/e;;
+    f) mv "$file" ~/OSSP/w8/assignment_week8/f;;
+    g) mv "$file" ~/OSSP/w8/assignment_week8/g;;
+    h) mv "$file" ~/OSSP/w8/assignment_week8/h;;
+    i) mv "$file" ~/OSSP/w8/assignment_week8/i;;
+    j) mv "$file" ~/OSSP/w8/assignment_week8/j;;
+    k) mv "$file" ~/OSSP/w8/assignment_week8/k;;
+    l) mv "$file" ~/OSSP/w8/assignment_week8/l;;
+    m) mv "$file" ~/OSSP/w8/assignment_week8/m;;
+    n) mv "$file" ~/OSSP/w8/assignment_week8/n;;
+    o) mv "$file" ~/OSSP/w8/assignment_week8/o;;
+    p) mv "$file" ~/OSSP/w8/assignment_week8/p;;
+    q) mv "$file" ~/OSSP/w8/assignment_week8/q;;
+    r) mv "$file" ~/OSSP/w8/assignment_week8/r;;
+    s) mv "$file" ~/OSSP/w8/assignment_week8/s;;
+    t) mv "$file" ~/OSSP/w8/assignment_week8/t;;
+    u) mv "$file" ~/OSSP/w8/assignment_week8/u;;
+    v) mv "$file" ~/OSSP/w8/assignment_week8/v;;
+    w) mv "$file" ~/OSSP/w8/assignment_week8/w;;
+    x) mv "$file" ~/OSSP/w8/assignment_week8/x;;
+    y) mv "$file" ~/OSSP/w8/assignment_week8/y;;
+    z) mv "$file" ~/OSSP/w8/assignment_week8/z;;
+    *) echo "Skipping file $file";;
+  esac
+done
+
